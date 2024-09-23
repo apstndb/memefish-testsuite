@@ -1,1 +1,15 @@
-.Decls[] | select(.Name.Name == "TestSQL") | .Body.List[] | select(.Lhs[0].Name == "tests") | .Rhs[] | [.Elts[] | {sql: .Elts[1].Value, reparse: .Elts[2].Name} | select(.sql | values) | "{\(.sql), \(.reparse)},"] | "package spansql\nvar tests = []struct{sql string; reparse func(string) (interface{}, error)}{\n" + join("\n") + "\n}"
+.Decls |= (
+    map(select(.Name.Name == "TestSQL") |
+        .Body.List[] | select(.Lhs[0].Name == "tests") |
+            {
+                NodeType: "GenDecl", Tok: "var", Specs: [
+                {
+                    NodeType: "ValueSpec",
+                    Names: .Lhs,
+                    Type: null,
+                    Values: (.Rhs | .[0].Type.Elt.Fields.List |= .[1:] | .[0].Elts[].Elts |= .[1:] )
+                }
+            ]
+        }
+    )
+)
