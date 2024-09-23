@@ -17,61 +17,10 @@ limitations under the License.
 package spansql
 
 import (
-	"github.com/cloudspannerecosystem/memefish"
-	"github.com/cloudspannerecosystem/memefish/token"
 	"testing"
 )
 
-func boolAddr(b bool) *bool {
-	return &b
-}
-
-func stringAddr(s string) *string {
-	return &s
-}
-
-func intAddr(i int) *int {
-	return &i
-}
-
 func TestSQL(t *testing.T) {
-	reparseDDL := func(s string) (interface{}, error) {
-		p := &memefish.Parser{Lexer: &memefish.Lexer{File: &token.File{
-			Buffer: s,
-		}}}
-		ddl, err := p.ParseDDL()
-		if err != nil {
-			return nil, err
-		}
-		return ddl, nil
-	}
-	reparseDML := func(s string) (interface{}, error) {
-		p := &memefish.Parser{Lexer: &memefish.Lexer{File: &token.File{
-			Buffer: s,
-		}}}
-		dml, err := p.ParseDML()
-		if err != nil {
-			return nil, err
-		}
-		return dml, nil
-	}
-	reparseQuery := func(s string) (interface{}, error) {
-		p := &memefish.Parser{Lexer: &memefish.Lexer{File: &token.File{
-			Buffer: s,
-		}}}
-		q, err := p.ParseQuery()
-		return q, err
-	}
-	reparseExpr := func(s string) (interface{}, error) {
-		p := &memefish.Parser{Lexer: &memefish.Lexer{File: &token.File{
-			Buffer: s,
-		}}}
-		e, pe := p.ParseExpr()
-		if pe != nil {
-			return nil, pe
-		}
-		return e, nil
-	}
 
 	/*
 		latz, err := time.LoadLocation("America/Los_Angeles")
@@ -81,7 +30,7 @@ func TestSQL(t *testing.T) {
 
 		line := func(n int) Position { return Position{Line: n} }
 	*/
-	tests := []struct {
+	_ = []struct {
 		sql     string
 		reparse func(string) (interface{}, error)
 	}{

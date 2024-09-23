@@ -1,0 +1,1 @@
+.Decls[] | select(.Name.Name == "TestSQL") | .Body.List[] | select(.Lhs[0].Name == "tests") | .Rhs[] | [.Elts[] | {sql: .Elts[1].Value, reparse: .Elts[2].Name} | select(.sql | values) | "{\(.sql), \(.reparse)},"] | "package spansql\nvar tests = []struct{sql string; reparse func(string) (interface{}, error)}{\n" + join("\n") + "\n}"

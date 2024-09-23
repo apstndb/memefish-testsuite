@@ -1,84 +1,84 @@
 --- FAIL: TestSQL (0.00s)
-    sql_test.go:496: Reparsing "CREATE TABLE WithSynonym (\n  Name STRING(MAX) NOT NULL,\n  SYNONYM(AnotherName),\n) PRIMARY KEY(Name)": syntax error::3:10: expected token: ARRAY, <ident>, but: (
+    sql_test.go:445: Reparsing "CREATE TABLE WithSynonym (\n  Name STRING(MAX) NOT NULL,\n  SYNONYM(AnotherName),\n) PRIMARY KEY(Name)": syntax error::3:10: expected token: ARRAY, <ident>, but: (
         
           3:    SYNONYM(AnotherName),
                        ^
-    sql_test.go:496: Reparsing "DROP VIEW SingersView": syntax error::1:6: expected pseudo keyword: TABLE, INDEX, ROLE, CHANGE, but: VIEW
+    sql_test.go:445: Reparsing "DROP VIEW SingersView": syntax error::1:6: expected pseudo keyword: TABLE, INDEX, ROLE, CHANGE, but: VIEW
         
           1:  DROP VIEW SingersView
                    ^~~~
-    sql_test.go:496: Reparsing "GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager": syntax error::1:17: expected pseudo keyword: TABLE, but: CHANGE
+    sql_test.go:445: Reparsing "GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager": syntax error::1:17: expected pseudo keyword: TABLE, but: CHANGE
         
           1:  GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager
                               ^~~~~~
-    sql_test.go:496: Reparsing "REVOKE SELECT ON CHANGE STREAM cs_name_one, cs_name_two FROM ROLE hr_manager": syntax error::1:18: expected pseudo keyword: TABLE, but: CHANGE
+    sql_test.go:445: Reparsing "REVOKE SELECT ON CHANGE STREAM cs_name_one, cs_name_two FROM ROLE hr_manager": syntax error::1:18: expected pseudo keyword: TABLE, but: CHANGE
         
           1:  REVOKE SELECT ON CHANGE STREAM cs_name_one, cs_name_two FROM ROLE hr_manager
                                ^~~~~~
-    sql_test.go:496: Reparsing "ALTER TABLE Ta ALTER COLUMN Ck DROP DEFAULT": syntax error::1:32: expect ident: BOOL, INT64, FLOAT32, FLOAT64, DATE, TIMESTAMP, NUMERIC, JSON, STRING, BYTES, but: DROP
+    sql_test.go:445: Reparsing "ALTER TABLE Ta ALTER COLUMN Ck DROP DEFAULT": syntax error::1:32: expect ident: BOOL, INT64, FLOAT32, FLOAT64, DATE, TIMESTAMP, NUMERIC, JSON, STRING, BYTES, but: DROP
         
           1:  ALTER TABLE Ta ALTER COLUMN Ck DROP DEFAULT
                                              ^~~~
-    sql_test.go:496: Reparsing "ALTER TABLE Ta ADD SYNONYM Syn": syntax error::1:20: expected pseuso keyword: COLUMN, CONSTRAINT, FOREIGN, but: SYNONYM
+    sql_test.go:445: Reparsing "ALTER TABLE Ta ADD SYNONYM Syn": syntax error::1:20: expected pseuso keyword: COLUMN, CONSTRAINT, FOREIGN, but: SYNONYM
         
           1:  ALTER TABLE Ta ADD SYNONYM Syn
                                  ^~~~~~~
-    sql_test.go:496: Reparsing "ALTER TABLE Ta DROP SYNONYM Syn": syntax error::1:21: expected pseuso keyword: COLUMN, CONSTRAINT, but: SYNONYM
+    sql_test.go:445: Reparsing "ALTER TABLE Ta DROP SYNONYM Syn": syntax error::1:21: expected pseuso keyword: COLUMN, CONSTRAINT, but: SYNONYM
         
           1:  ALTER TABLE Ta DROP SYNONYM Syn
                                   ^~~~~~~
-    sql_test.go:496: Reparsing "ALTER TABLE Ta RENAME TO Tb, ADD SYNONYM Syn": syntax error::1:16: expected pseuso keyword: ADD, ALTER, DROP, but: RENAME
+    sql_test.go:445: Reparsing "ALTER TABLE Ta RENAME TO Tb, ADD SYNONYM Syn": syntax error::1:16: expected pseuso keyword: ADD, ALTER, DROP, but: RENAME
         
           1:  ALTER TABLE Ta RENAME TO Tb, ADD SYNONYM Syn
                              ^~~~~~
-    sql_test.go:496: Reparsing "RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb": syntax error::1:1: expected pseudo keyword: ALTER, DROP, but: RENAME
+    sql_test.go:445: Reparsing "RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb": syntax error::1:1: expected pseudo keyword: ALTER, DROP, but: RENAME
         
           1:  RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb
               ^~~~~~
-    sql_test.go:496: Reparsing "ALTER DATABASE dbname SET OPTIONS (enable_key_visualizer=true)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
+    sql_test.go:445: Reparsing "ALTER DATABASE dbname SET OPTIONS (enable_key_visualizer=true)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
         
           1:  ALTER DATABASE dbname SET OPTIONS (enable_key_visualizer=true)
                     ^~~~~~~~
-    sql_test.go:496: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=2)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
+    sql_test.go:445: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=2)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
         
           1:  ALTER DATABASE dbname SET OPTIONS (optimizer_version=2)
                     ^~~~~~~~
-    sql_test.go:496: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=2, optimizer_statistics_package='auto_20191128_14_47_22UTC', version_retention_period='7d', enable_key_visualizer=true, default_leader='europe-west1')": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
+    sql_test.go:445: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=2, optimizer_statistics_package='auto_20191128_14_47_22UTC', version_retention_period='7d', enable_key_visualizer=true, default_leader='europe-west1')": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
         
           1:  ALTER DATABASE dbname SET OPTIONS (optimizer_version=2, optimizer_statistics_package='auto_20191128_14_47_22UTC', version_retention_period='7d', enable_key_visualizer=true, default_leader='europe-west1')
                     ^~~~~~~~
-    sql_test.go:496: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=null, optimizer_statistics_package=null, version_retention_period=null, enable_key_visualizer=null, default_leader=null)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
+    sql_test.go:445: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=null, optimizer_statistics_package=null, version_retention_period=null, enable_key_visualizer=null, default_leader=null)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
         
           1:  ALTER DATABASE dbname SET OPTIONS (optimizer_version=null, optimizer_statistics_package=null, version_retention_period=null, enable_key_visualizer=null, default_leader=null)
                     ^~~~~~~~
-    sql_test.go:496: Reparsing "ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: STATISTICS
+    sql_test.go:445: Reparsing "ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)": syntax error::1:7: expected pseudo keyword: TABLE, CHANGE, but: STATISTICS
         
           1:  ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)
                     ^~~~~~~~~~
-    sql_test.go:496: Reparsing "UPDATE Ta SET Cb = 4, Ce = \"wow\", Cf = Cg, Cg = NULL, Ch = DEFAULT WHERE Ca": syntax error::1:60: unexpected token: DEFAULT
+    sql_test.go:445: Reparsing "UPDATE Ta SET Cb = 4, Ce = \"wow\", Cf = Cg, Cg = NULL, Ch = DEFAULT WHERE Ca": syntax error::1:60: unexpected token: DEFAULT
         
           1:  UPDATE Ta SET Cb = 4, Ce = "wow", Cf = Cg, Cg = NULL, Ch = DEFAULT WHERE Ca
                                                                          ^~~~~~~
-    sql_test.go:496: Reparsing "SELECT SAFE_CAST(7 AS DATE)": syntax error::1:20: expected token: ), but: AS
+    sql_test.go:445: Reparsing "SELECT SAFE_CAST(7 AS DATE)": syntax error::1:20: expected token: ), but: AS
         
           1:  SELECT SAFE_CAST(7 AS DATE)
                                  ^~
-    sql_test.go:496: Reparsing "ARRAY_AGG(Foo IGNORE NULLS)": syntax error::1:15: expected token: ), but: IGNORE
+    sql_test.go:445: Reparsing "ARRAY_AGG(Foo IGNORE NULLS)": syntax error::1:15: expected token: ), but: IGNORE
         
           1:  ARRAY_AGG(Foo IGNORE NULLS)
                             ^~~~~~
-    sql_test.go:496: Reparsing "ANY_VALUE(Foo HAVING MAX Bar)": syntax error::1:15: expected token: ), but: HAVING
+    sql_test.go:445: Reparsing "ANY_VALUE(Foo HAVING MAX Bar)": syntax error::1:15: expected token: ), but: HAVING
         
           1:  ANY_VALUE(Foo HAVING MAX Bar)
                             ^~~~~~
-    sql_test.go:496: Reparsing "STRING_AGG(DISTINCT Foo, \",\" IGNORE NULLS HAVING MAX Bar)": syntax error::1:30: expected token: ), but: IGNORE
+    sql_test.go:445: Reparsing "STRING_AGG(DISTINCT Foo, \",\" IGNORE NULLS HAVING MAX Bar)": syntax error::1:30: expected token: ), but: IGNORE
         
           1:  STRING_AGG(DISTINCT Foo, "," IGNORE NULLS HAVING MAX Bar)
                                            ^~~~~~
-    sql_test.go:496: Reparsing "JSON '{\"a\": 1}'": syntax error::1:6: expected token: <eof>, but: <string>
+    sql_test.go:445: Reparsing "JSON '{\"a\": 1}'": syntax error::1:6: expected token: <eof>, but: <string>
         
           1:  JSON '{"a": 1}'
                    ^~~~~~~~~~
 FAIL
-FAIL	memefish-testsuite/spanner/spansql	0.209s
+FAIL	memefish-testsuite/spanner/spansql	0.778s
 FAIL
