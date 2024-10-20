@@ -7,7 +7,7 @@
                     NodeType: "ValueSpec",
                     Names: .Lhs,
                     Type: null,
-                    Values: (.Rhs | .[0].Type.Elt.Fields.List |= .[1:] | .[0].Elts[].Elts |= .[1:] )
+                    Values: (.Rhs | .[0].Type.Elt.Fields.List |= .[1:] | .[0].Elts[].Elts |= .[1:])
                 }
             ]
         }

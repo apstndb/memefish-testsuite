@@ -1,7 +1,7 @@
 Run spansql test cases in memefish
 
 ```
-go test ./spanner/spansql > output/result.txt
+go test ./spansql > output/result.txt
 ```
 
 update test cases
@@ -11,5 +11,5 @@ go install github.com/segmentio/golines@latest
 
 git submodule update
 
-asty go2json -input ./google-cloud-go/spanner/spansql/sql_test.go | jq -f gen_tests.jq -r | asty json2go | golines -m 20 > ./spanner/spansql/testcases_test.go
+asty go2json -input ./google-cloud-go/spanner/spansql/sql_test.go | jq -f gen_tests.jq -r | asty json2go | golines -m 20 > spansql/testcases_test.go
 ```
