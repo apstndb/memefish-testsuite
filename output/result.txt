@@ -3,10 +3,6 @@
         
           3:    SYNONYM(AnotherName),
                        ^
-    sql_test.go:42: Reparsing "DROP VIEW SingersView": syntax error: :1:6: expected pseudo keyword: TABLE, INDEX, ROLE, CHANGE, but: VIEW
-        
-          1:  DROP VIEW SingersView
-                   ^~~~
     sql_test.go:42: Reparsing "GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager": syntax error: :1:17: expected pseudo keyword: TABLE, but: CHANGE
         
           1:  GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager
@@ -64,5 +60,5 @@
           1:  SELECT SAFE_CAST(7 AS DATE)
                                  ^~
 FAIL
-FAIL	memefish-testsuite/spansql	0.352s
+FAIL	memefish-testsuite/spansql	0.366s
 FAIL
