@@ -55,10 +55,6 @@
         
           1:  UPDATE Ta SET Cb = 4, Ce = "wow", Cf = Cg, Cg = NULL, Ch = DEFAULT WHERE Ca
                                                                          ^~~~~~~
-    sql_test.go:42: Reparsing "SELECT SAFE_CAST(7 AS DATE)": syntax error: :1:20: expected token: ), but: AS
-        
-          1:  SELECT SAFE_CAST(7 AS DATE)
-                                 ^~
 FAIL
-FAIL	memefish-testsuite/spansql	0.366s
+FAIL	memefish-testsuite/spansql	0.202s
 FAIL
