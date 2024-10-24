@@ -10,6 +10,10 @@ github.com/cloudspannerecosystem/memefish v0.0.0-20241021065449-c03c4deee355 h1:
 github.com/cloudspannerecosystem/memefish v0.0.0-20241021065449-c03c4deee355/go.mod h1:A3kg33HoLP0687AgabrwhnXBN8nx96ki2qJ3MisirOM=
 github.com/cloudspannerecosystem/memefish v0.0.0-20241022012054-82b12ba8d126 h1:ZXf0E60t3l4FUzMX+OYYeXoZnMu5rwhhgTgV78vvO74=
 github.com/cloudspannerecosystem/memefish v0.0.0-20241022012054-82b12ba8d126/go.mod h1:A3kg33HoLP0687AgabrwhnXBN8nx96ki2qJ3MisirOM=
+github.com/cloudspannerecosystem/memefish v0.0.0-20241024050358-72cd05cfdf38 h1:Qedb6c/M8ADTroVV2FEuENA86MZI1k7m7+DTy3tBZWY=
+github.com/cloudspannerecosystem/memefish v0.0.0-20241024050358-72cd05cfdf38/go.mod h1:A3kg33HoLP0687AgabrwhnXBN8nx96ki2qJ3MisirOM=
+github.com/cloudspannerecosystem/memefish v0.0.0-20241024052433-3f8a4d83fd14 h1:zsXEB/jxkxt1CV3E1y8flhiKxQ708NEmxsXvtLLh65g=
+github.com/cloudspannerecosystem/memefish v0.0.0-20241024052433-3f8a4d83fd14/go.mod h1:A3kg33HoLP0687AgabrwhnXBN8nx96ki2qJ3MisirOM=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/k0kubun/pp v1.3.1-0.20200204103551-99835366d1cc h1:XLjmW07gT7cG/wb6mavIrvAIWBYaTacPo8UOnxGSspA=

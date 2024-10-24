@@ -4,5 +4,5 @@ go 1.23.0
 
 require (
 	cloud.google.com/go v0.115.1
-	github.com/cloudspannerecosystem/memefish v0.0.0-20241022012054-82b12ba8d126
+	github.com/cloudspannerecosystem/memefish v0.0.0-20241024052433-3f8a4d83fd14
 )

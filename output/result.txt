@@ -1,60 +1,12 @@
 --- FAIL: TestSQL (0.00s)
-    sql_test.go:42: Reparsing "CREATE TABLE WithSynonym (\n  Name STRING(MAX) NOT NULL,\n  SYNONYM(AnotherName),\n) PRIMARY KEY(Name)": syntax error: :3:10: expected token: ARRAY, <ident>, but: (
-        
-          3:    SYNONYM(AnotherName),
-                       ^
-    sql_test.go:42: Reparsing "GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager": syntax error: :1:17: expected pseudo keyword: TABLE, but: CHANGE
-        
-          1:  GRANT SELECT ON CHANGE STREAM cs_name_one, cs_name_two TO ROLE hr_manager
-                              ^~~~~~
-    sql_test.go:42: Reparsing "REVOKE SELECT ON CHANGE STREAM cs_name_one, cs_name_two FROM ROLE hr_manager": syntax error: :1:18: expected pseudo keyword: TABLE, but: CHANGE
-        
-          1:  REVOKE SELECT ON CHANGE STREAM cs_name_one, cs_name_two FROM ROLE hr_manager
-                               ^~~~~~
-    sql_test.go:42: Reparsing "ALTER TABLE Ta ALTER COLUMN Ck DROP DEFAULT": syntax error: :1:44: expected token: (, but: <eof>
-        
-          1:  ALTER TABLE Ta ALTER COLUMN Ck DROP DEFAULT
-                                                         ^
-    sql_test.go:42: Reparsing "ALTER TABLE Ta ADD SYNONYM Syn": syntax error: :1:20: expected pseuso keyword: COLUMN, CONSTRAINT, FOREIGN, but: SYNONYM
-        
-          1:  ALTER TABLE Ta ADD SYNONYM Syn
-                                 ^~~~~~~
-    sql_test.go:42: Reparsing "ALTER TABLE Ta DROP SYNONYM Syn": syntax error: :1:21: expected pseuso keyword: COLUMN, CONSTRAINT, but: SYNONYM
-        
-          1:  ALTER TABLE Ta DROP SYNONYM Syn
-                                  ^~~~~~~
-    sql_test.go:42: Reparsing "ALTER TABLE Ta RENAME TO Tb, ADD SYNONYM Syn": syntax error: :1:16: expected pseuso keyword: ADD, ALTER, DROP, but: RENAME
-        
-          1:  ALTER TABLE Ta RENAME TO Tb, ADD SYNONYM Syn
-                             ^~~~~~
     sql_test.go:42: Reparsing "RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb": syntax error: :1:1: expected pseudo keyword: ALTER, DROP, but: RENAME
         
           1:  RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb
               ^~~~~~
-    sql_test.go:42: Reparsing "ALTER DATABASE dbname SET OPTIONS (enable_key_visualizer=true)": syntax error: :1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
-        
-          1:  ALTER DATABASE dbname SET OPTIONS (enable_key_visualizer=true)
-                    ^~~~~~~~
-    sql_test.go:42: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=2)": syntax error: :1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
-        
-          1:  ALTER DATABASE dbname SET OPTIONS (optimizer_version=2)
-                    ^~~~~~~~
-    sql_test.go:42: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=2, optimizer_statistics_package='auto_20191128_14_47_22UTC', version_retention_period='7d', enable_key_visualizer=true, default_leader='europe-west1')": syntax error: :1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
-        
-          1:  ALTER DATABASE dbname SET OPTIONS (optimizer_version=2, optimizer_statistics_package='auto_20191128_14_47_22UTC', version_retention_period='7d', enable_key_visualizer=true, default_leader='europe-west1')
-                    ^~~~~~~~
-    sql_test.go:42: Reparsing "ALTER DATABASE dbname SET OPTIONS (optimizer_version=null, optimizer_statistics_package=null, version_retention_period=null, enable_key_visualizer=null, default_leader=null)": syntax error: :1:7: expected pseudo keyword: TABLE, CHANGE, but: DATABASE
-        
-          1:  ALTER DATABASE dbname SET OPTIONS (optimizer_version=null, optimizer_statistics_package=null, version_retention_period=null, enable_key_visualizer=null, default_leader=null)
-                    ^~~~~~~~
     sql_test.go:42: Reparsing "ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)": syntax error: :1:7: expected pseudo keyword: TABLE, CHANGE, but: STATISTICS
         
           1:  ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)
                     ^~~~~~~~~~
-    sql_test.go:42: Reparsing "UPDATE Ta SET Cb = 4, Ce = \"wow\", Cf = Cg, Cg = NULL, Ch = DEFAULT WHERE Ca": syntax error: :1:60: unexpected token: DEFAULT
-        
-          1:  UPDATE Ta SET Cb = 4, Ce = "wow", Cf = Cg, Cg = NULL, Ch = DEFAULT WHERE Ca
-                                                                         ^~~~~~~
 FAIL
-FAIL	memefish-testsuite/spansql	0.202s
+FAIL	memefish-testsuite/spansql	0.214s
 FAIL
