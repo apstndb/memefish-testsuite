@@ -1,12 +1,8 @@
 --- FAIL: TestSQL (0.00s)
-    sql_test.go:42: Reparsing "RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb": syntax error: :1:1: expected pseudo keyword: ALTER, DROP, but: RENAME
-        
-          1:  RENAME TABLE Ta TO tmp, Tb TO Ta, tmp TO Tb
-              ^~~~~~
     sql_test.go:42: Reparsing "ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)": syntax error: :1:7: expected pseudo keyword: TABLE, CHANGE, but: STATISTICS
         
           1:  ALTER STATISTICS auto_20191128_14_47_22UTC SET OPTIONS (allow_gc=false)
                     ^~~~~~~~~~
 FAIL
-FAIL	memefish-testsuite/spansql	0.214s
+FAIL	memefish-testsuite/spansql	0.347s
 FAIL
