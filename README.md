@@ -1,7 +1,7 @@
 Run spansql test cases in memefish
 
 ```
-go test ./spansql > output/result.txt
+make update-result
 ```
 
 update test cases
